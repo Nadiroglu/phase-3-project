@@ -40,9 +40,7 @@
 #Flatiron promises to warn you of danger at any turn. For example, the next test has been replaced with an active firing squad designed to train military personnel. Good luck.
 
 #Will you
-#A: Run as quickly as possible through the course. 
-#B: Shut off the lights so that you can't be seen Correct
-#C: Assume the fetal position and accept your fate. 
+
 
 #Have you heard of turrets? They're about six feet tall, unstable on their feet, and full of bullets. Oh wait, that's you in 5 seconds. health -1.
 
@@ -62,7 +60,7 @@
 
 # The fourth test is located in an empty abandoned elevator shaft in which you are currently in freefall. Since we are located in New York, here on Earth, how quickly are you currently falling? 
 
-#-9.8 meters per second. Impressive. And yes, even you, at your size, fall that slowly. I'll add a few zeroes to the maximum weight of the next elevator. You look great by the way, very healthy. Waddle over to the next door so we can continue testing.
+#-9.8 m/sec. Impressive. And yes, even you, at your size, fall that slowly. I'll add a few zeroes to the maximum weight of the next elevator. You look great by the way, very healthy. Waddle over to the next door so we can continue testing.
 
 # SPLAT! A chorus to the ears. The floor really comes at you fast, doesn't it. Let's try this one again. This test is one of my favorites. -1 health.
 
