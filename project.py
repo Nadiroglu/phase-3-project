@@ -174,11 +174,11 @@ def question7(treasure, health, ada, jackpot):
             print(f"Calling ... {name}")
             time.sleep(2)
             print("Hello? ")
-            print(f"Hey, {name} I'm playing a questionary game. And i need your help...! Would you Help me? \n")
+            print(f"Hey, {name} I'm playing a questionnaire game. And i need your help...! Will you help me? \n")
             time.sleep(2)
             print("Sure, What is the question... ?\n")
             time.sleep(4)
-            print("Don't you DARE open that utility closet. Oh, you decided to do so anyway. Must you always do the opposite of what I desire? I'm going to laminate your skeleton. Well, inside you'll find a green, a blue, and an orange wire. Do NOT unplug the orange wire. Don't do it! Why are you reaching for them? Which one will you unplug???? \n")
+            print("Inside of this utility closet there's a green, a blue, and an orange wire.Which one will you unplug???? \n")
             time.sleep(3)
             print("Well, I like green, So I think it is green \n")
             time.sleep(5)
@@ -210,11 +210,11 @@ def question6(treasure, health, ada, jackpot):
 
     jack = input("Before starting the question.... \n Would you like to use your jackpot??? \n Type 'Enter' or 'No' If you keep it, Jackpot might be upgraded to smth interesting 🌠🌠")
     if jack == "":
-        print("I think you should Build up your Savings in this Economy, maaan...! \n  Alright! The answer was 'EXOSPHERE'")
+        print("I think you should build up your savings, and in this Economy??? \n  Alright! The answer was 'EXOSPHERE'")
         jackpot -= 1
         question7(treasure, health, ada)
     elif jack == 'no':
-        print("I believe that YOU ARE SO SMARTTT !!!\n  😶‍🌫️😶‍🌫️😶‍🌫️ We will see how smart you are at the question 😶‍🌫️😶‍🌫️😶‍🌫️ ")
+        print("I can't believe that YOU ARE SO SMARTTT !!!\n  😶‍🌫️😶‍🌫️😶‍🌫️ We will see how smart you are in the question 😶‍🌫️😶‍🌫️😶‍🌫️ ")
         jackpot = jackpot
     else:
         print("No VALID")
@@ -254,7 +254,7 @@ def question5(treasure, health, ada, jackpot):
         health += 0
         ada -= 1
         time.sleep(3)
-        print("GOOD JOB! ! ! 🃏🃏🃏🃏 You earned a jackpot point 🃏🃏🃏🃏\n After this point you will be able to SKIP one of questions and you'll know the answer. ")
+        print("GOOD JOB! ! ! 🃏🃏🃏🃏 You earned a jackpot point 🃏🃏🃏🃏\n After this point you will be able to SKIP one of my questions. ")
         jackpot += 1
         print(f"| Current Jackpot: {jackpot} |")
         time.sleep(5)
@@ -288,15 +288,15 @@ def question4(treasure, health, ada, jackpot):
         time.sleep(3)
         if treasure > 0:
             print(f"A ! A ! A ! \n    YOU HAVE {treasure} TREASURE \n   ARE YOU GOING TO USE THEM TO SAVE YOUR HEALTH? 😈 ")
-            chance = input("Press 'ENTER' to use it or 'KEEP' to save it")
+            chance = input("Press 'ENTER' to use it or 'KEEP' to save it\n")
             if chance == "":
                 treasure -= 1
                 health -= 0
                 ada += 0
-                print("Okay I give you a chance to move forward. And Here is your next question")
+                print("Okay I'll give you a chance to move forward. Here is your next question")
                 question5(treasure, health, ada, jackpot)
             else:
-                print("😂  Okay thats fair enough you lose your health 😂")
+                print("😂  Okay thats fair enough! You lose your health 😂")
         ada += 0
         health -= 1
         time.sleep(1)
@@ -320,7 +320,7 @@ def question3(treasure, health, ada, jackpot):
         print("🎉🎉🎉 You got a treasure 🎉🎉🎉. You can 'OPEN' or 'KEEP' it.")
         treasure_ques = input("Press 'KEEP' to save it or type 'OPEN' to open it\n")
         if treasure_ques.lower() == "keep":
-            print("Saving things worth it sometimes. Here is your next question!")
+            print("Saving things is worth it sometimes. Here is your next question!")
             treasure += 1
             print(f"| Current Saving: {treasure} |") 
             question4(treasure, health, ada, jackpot)
@@ -332,7 +332,7 @@ def question3(treasure, health, ada, jackpot):
             question4(treasure, health, ada, jackpot)
         else:
             print("Type something valid ! ! !")
-            print("As you cut my validation i'll punish you with losing your chance for treasure.")
+            print("As you cut my validation i'll punish you by taking away your treasure.")
             question4(treasure, health, ada, jackpot)
     else:
         print("Oh, it appears you've been grazed by a live 40,000 volt electrical wire. Oopsie-doopsie whoopsie-do! That'll leave a mark.")
