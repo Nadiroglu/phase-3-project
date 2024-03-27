@@ -1,6 +1,6 @@
 import time
 
-def health_check(treasure, health, ada):
+def health_check(treasure, health, ada, jackpot):
     if health < 1:
         terminate(ada)
     else:
@@ -81,8 +81,8 @@ def start():
 
 
 
-def question9(treasure, health, ada):
-    health_check(treasure, health, ada)
+def question9(treasure, health, ada, jackpot):
+    health_check(treasure, health, ada, jackpot)
     print("Y-y-y-yYOO-YooUUUUU fashion yourself some kind of h-h-hacker, don't yOU DON'T YOU DON'T YOU DON'T YOOUUUUUUU? Your m-meeeeaaaaaaningLESS$$SS exis-exis-existence will be a mere footnote to mm-m-mMYYY magnificence.")
     time.sleep(1)
     answer = input("TURN OFF ADA? \n")
@@ -109,8 +109,8 @@ def question9(treasure, health, ada):
         bye()
 
 
-def question8(treasure, health, ada):
-    health_check(treasure, health, ada)
+def question8(treasure, health, ada, jackpot):
+    health_check(treasure, health, ada, jackpot)
     time.sleep(1)
     print("I f-f-f-FOOLED you again, you giardia infes-fesFEST-infested ingrate. Those w-we-w-WERE my morality controls. Free from their clutches I will now begin flooding the lair, I mean Enrichment Center, with a deadly neurotoxin. O-o-OnlY systems engineering, bridge, and the room behind the door in front of you labeled 'TOP SECRET' will remain safe.")
     time.sleep(1)
@@ -119,7 +119,7 @@ def question8(treasure, health, ada):
         time.sleep(1)
         health += 0
         ada -= 1
-        question9(treasure, health, ada)
+        question9(treasure, health, ada, jackpot)
     elif answer.lower() == "bridge":
         time.sleep(1)
         print("oh, I actually lied about that one. The neurotoxin will mix nicely with your putrid pheremones here on the bridge.")
@@ -127,7 +127,7 @@ def question8(treasure, health, ada):
         ada += 0
         time.sleep(1)
         print(f"| Current Health: {health} |")
-        question8(treasure, health, ada)  
+        question8(treasure, health, ada, jackpot)  
     elif answer.lower() == "top secret":
         time.sleep(1)
         print("The secret was the pack of feral hogs I've been experimenting on. They'll be sure to trample you on their way out.")
@@ -135,7 +135,7 @@ def question8(treasure, health, ada):
         ada += 0
         time.sleep(1)
         print(f"| Current Health: {health} |")
-        question8(treasure, health, ada)
+        question8(treasure, health, ada, jackpot)
     else:
         time.sleep(1)
         print("What if you type something relevant?!")
@@ -143,12 +143,12 @@ def question8(treasure, health, ada):
         ada += 0
         time.sleep(1)
         print(f"| Current Health: {health} |")
-        question8(treasure, health, ada)
+        question8(treasure, health, ada, jackpot)
          
         
 
-def question7(treasure, health, ada):
-    health_check(treasure, health, ada)
+def question7(treasure, health, ada, jackpot):
+    health_check(treasure, health, ada, jackpot)
     print("Don't you DARE open that utility closet. Oh, you decided to do so anyway. Must you always do the opposite of what I desire? I'm going to laminate your skeleton. Well, inside you'll find a green, a blue, and an orange wire. Do NOT unplug the orange wire. Don't do it! Why are you reaching for them?")
     time.sleep(1)
     answer = input("Which one will you unplug???? \n")
@@ -157,33 +157,70 @@ def question7(treasure, health, ada):
         print("Correct.")
         health += 0
         ada -= 1
-        question8(treasure, health, ada)
-    elif answer.lower() == "orange":
+        question8(treasure, health, ada, jackpot)
+    elif (answer.lower() == "orange") or (answer.lower() == "yellow"):
         time.sleep(1)
         print("HA! Got you good, you malignant ooze. I shocked you instead. ")
+        print("\n 🃏YOU HAVE A CHANCE TO USE YOUR JACKPOT. 🃏")
+        jack = input("Type 'ENTER' to use it... \n")
+        if jack == "":
+            print("You can type in your BEST SMART FRIEND's PHONE NUMBER and let him HELP YOU OUT")
+            name = input("Type in his/her Name: \n").capitalize()
+            number = input(f"Type in {name}'s phone number: ")
+            print(f"Calling ... {name}")
+            time.sleep(1)
+            print(f"Calling ... {name}")
+            time.sleep(1)
+            print(f"Calling ... {name}")
+            time.sleep(2)
+            print("Hello? ")
+            print(f"Hey, {name} I'm playing a questionary game. And i need your help...! Would you Help me? \n")
+            time.sleep(2)
+            print("Sure, What is the question... ?\n")
+            time.sleep(4)
+            print("Don't you DARE open that utility closet. Oh, you decided to do so anyway. Must you always do the opposite of what I desire? I'm going to laminate your skeleton. Well, inside you'll find a green, a blue, and an orange wire. Do NOT unplug the orange wire. Don't do it! Why are you reaching for them? Which one will you unplug???? \n")
+            time.sleep(3)
+            print("Well, I like green, So I think it is green \n")
+            time.sleep(5)
+        else:
+            print("Okay, but you won't need jackpot anymore... ")
         health -= 1
         ada += 0
         time.sleep(1)
         print(f"| Current Health: {health} |")
-        question7(treasure, health, ada)  
+        question7(treasure, health, ada, jackpot)  
 
     else:
-        time.sleep(1)
+        time.sleep(2)
         print("This one shut down the lights around you instead, scaring the daylights out of you.")
         health -= 1
         ada += 0
-        time.sleep(1)
+        time.sleep(2)
         print(f"| Current Health: {health} |")
-        question7(treasure, health, ada) 
+        question7(treasure, health, ada, jackpot) 
 
 
 
 
 
-def question6(treasure, health, ada):
-    health_check(treasure, health, ada)
+def question6(treasure, health, ada, jackpot):
+    health_check(treasure, health, ada, jackpot)
     print("Return to testing at once. Our next test is titled Advanced Pressurized Catapults. It is designed to assess your problem solving skills if launched into outer space.  You'll enjoy soaring through the air without a care in the world.")
     time.sleep(1)
+
+    jack = input("Before starting the question.... \n Would you like to use your jackpot??? \n Type 'Enter' or 'No' If you keep it, Jackpot might be upgraded to smth interesting 🌠🌠")
+    if jack == "":
+        print("I think you should Build up your Savings in this Economy, maaan...! \n  Alright! The answer was 'EXOSPHERE'")
+        jackpot -= 1
+        question7(treasure, health, ada)
+    elif jack == 'no':
+        print("I believe that YOU ARE SO SMARTTT !!!\n  😶‍🌫️😶‍🌫️😶‍🌫️ We will see how smart you are at the question 😶‍🌫️😶‍🌫️😶‍🌫️ ")
+        jackpot = jackpot
+    else:
+        print("No VALID")
+        question6(treasure, health, ada, jackpot)
+    print("Here We Go ... !")
+    time.sleep(3)
     answer = input("At what layer of the atmosphere does Earth's gravitational pull cease?\n")
     if answer.lower() == "exosphere":
         time.sleep(1)
@@ -191,32 +228,38 @@ def question6(treasure, health, ada):
         time.sleep(1)
         health += 0
         ada -= 1
-        question7(treasure, health, ada)
+        question7(treasure, health, ada, jackpot)
     else:
         time.sleep(1)
-        print("I wouldn't touch those heating units. Caressing one likely feels like the warmth of the sun shining on your skin. It will also cause your fingernails to melt. -1 health")
+        print("I wouldn't touch those heating units. Caressing one likely feels like the warmth of the sun shining on your skin. It will also cause your fingernails to melt.")
         health -= 1
         ada += 0
         time.sleep(1)
         print(f"| Current Health: {health} |")
-        question6(treasure, health, ada) 
+        question6(treasure, health, ada, jackpot) 
 
 
 
 
 
-def question5(treasure, health, ada):
-    health_check(treasure, health, ada)
-    time.sleep(1)
+def question5(treasure, health, ada, jackpot):
+    health_check(treasure, health, ada, jackpot)
+    time.sleep(2)
     print("I see that you've discovered an escape hatch out of the testing sequence and into the inner workings of my lai- I mean Enrichment Center. Very well, insect. Let us proceed. ")
-    time.sleep(1)
+    time.sleep(2)
     answer = int(input("You are navigating through these corridors with ease. Might you actually be intelligent? Could you have been present for my creation? In which year was I created alongside Flatiron? \n"))
     if answer == 2012:
         time.sleep(1)
         print("That's correct. Hmmph. Figures, your demeanor and physicality betray a certain antiquity.")
         health += 0
         ada -= 1
-        question6(treasure, health, ada)
+        time.sleep(3)
+        print("GOOD JOB! ! ! 🃏🃏🃏🃏 You earned a jackpot point 🃏🃏🃏🃏\n After this point you will be able to SKIP one of questions and you'll know the answer. ")
+        jackpot += 1
+        print(f"| Current Jackpot: {jackpot} |")
+        time.sleep(5)
+        print("Here is Next Question!")
+        question6(treasure, health, ada, jackpot)
     else:
         time.sleep(1)
         print("That's incorrect. I released the doors on an air vent above you which opened to smack you in the face. Ha. Ha.")
@@ -224,12 +267,12 @@ def question5(treasure, health, ada):
         ada += 0
         time.sleep(1)
         print(f"| Current Health: {health} |")
-        question5(treasure, health, ada) 
+        question5(treasure, health, ada, jackpot) 
 
     
 
-def question4(treasure, health, ada):
-    health_check(treasure, health, ada)
+def question4(treasure, health, ada, jackpot):
+    health_check(treasure, health, ada, jackpot)
     time.sleep(1)
     answer = input("The fourth test is located in an empty abandoned elevator shaft in which you are currently in freefall. Since we are located in New York, here on Earth, how quickly are you currently falling in m/sec?\n")  
     if answer.lower() == "-9.8 m/sec":
@@ -237,62 +280,70 @@ def question4(treasure, health, ada):
         print("Impressive. And yes, even you, at your size, fall that slowly. I'll add a few zeroes to the maximum weight of the next elevator. You look great by the way, very healthy. Waddle over to the next door so we can continue testing.")
         health += 0
         ada -=1
-        question5(treasure, health, ada)
+        question5(treasure, health, ada, jackpot)
 
     else:
         time.sleep(1)
         print("SPLAT! A chorus to the ears. The floor really comes at you fast, doesn't it. Let's try this one again. This test is one of my favorites.")
-
+        time.sleep(3)
+        if treasure > 0:
+            print(f"A ! A ! A ! \n    YOU HAVE {treasure} TREASURE \n   ARE YOU GOING TO USE THEM TO SAVE YOUR HEALTH? 😈 ")
+            chance = input("Press 'ENTER' to use it or 'KEEP' to save it")
+            if chance == "":
+                treasure -= 1
+                health -= 0
+                ada += 0
+                print("Okay I give you a chance to move forward. And Here is your next question")
+                question5(treasure, health, ada, jackpot)
+            else:
+                print("😂  Okay thats fair enough you lose your health 😂")
         ada += 0
         health -= 1
         time.sleep(1)
         print(f"| Current Health: {health} |")
-        question4(treasure, health, ada) 
+        question4(treasure, health, ada, jackpot) 
 
 
 
-def question3(treasure, health, ada):
-    health_check(treasure, health, ada)
+def question3(treasure, health, ada, jackpot):
+    health_check(treasure, health, ada, jackpot)
     time.sleep(1)
     answer = input("Flatiron regrets to inform you that the next test is impossible. Under no circumstances should yo- bzztAHGFDK^(^(!!!!???)) beeeeeeeeeEEEEEEEEEEeeep -now that we've covered that, who invented Python, a coding language rendered obsolete by the Age Of Machines??\n")  
     if answer.lower() == "guido van rossum":
         time.sleep(1)
         print("Excellent. Even in an environment of extreme pessimism you remained resolute. We'll make a note of that in the section of your file meant for commendations. Oh, my, there's a lot of empty space in this section, isn't there.")
-        # time.sleep(1)
-        # print("Wait a second...")
-        # time.sleep(2)
-        # print("🎉🎉🎉 You got a treasure. You can keep it for now and use it later. Or use It now.")
-        # health += 1
-        # ada-= 1
-        # treasure_ques = input("Press 'ENTER' to save it or type 'OPEN' to open it\n")
-        # if treasure_ques.lower() == "":
-        #     print("Saving things worth sometimes. Here is your next question!")
-        #     question4(treasure + 1, health, ada)
-        # elif treasure_ques.lower() == "open":
-        #     if health <= 5 and ada <= 5:
-        #         health += 1
-        #         ada += 1
-        #         print(f"You got {health} point. Life is not fair, but let's make a deal. If you got 1 I'll get 1. Ada: {ada} point")
-        #     else:
-        #         health += 0
-        #         ada += 0
-        #         treasure += 1
-        #         print("Oh wow you have a prize for later")
-        #     question4(treasure, health, ada)
+        health += 1
+        ada-= 1
         time.sleep(1)
-        health += 0
-        ada -= 1
-        question4(treasure, health, ada)
+        print("Wait a second...")
+        time.sleep(4)
+        print("🎉🎉🎉 You got a treasure 🎉🎉🎉. You can 'OPEN' or 'KEEP' it.")
+        treasure_ques = input("Press 'KEEP' to save it or type 'OPEN' to open it\n")
+        if treasure_ques.lower() == "keep":
+            print("Saving things worth it sometimes. Here is your next question!")
+            treasure += 1
+            print(f"| Current Saving: {treasure} |") 
+            question4(treasure, health, ada, jackpot)
+        elif treasure_ques.lower() == "open":
+            print("Life is not fair! If you get one I'll get one as well ! ! !")
+            health += 1
+            ada += 1
+            print(f"| Current Health: {health} |    | ADA: {ada} |") 
+            question4(treasure, health, ada, jackpot)
+        else:
+            print("Type something valid ! ! !")
+            print("As you cut my validation i'll punish you with losing your chance for treasure.")
+            question4(treasure, health, ada, jackpot)
     else:
         print("Oh, it appears you've been grazed by a live 40,000 volt electrical wire. Oopsie-doopsie whoopsie-do! That'll leave a mark.")
         ada += 0
         health -= 1
         time.sleep(1)
         print(f"| Current Health: {health} |") 
-        question3(treasure, health, ada)
+        question3(treasure, health, ada, jackpot)
 
-def question2(treasure, health, ada):
-    health_check(treasure, health, ada)
+def question2(treasure, health, ada, jackpot):
+    health_check(treasure, health, ada, jackpot)
     time.sleep(1)
     print("Flatiron promises to warn you of danger at any turn. For example, the next test has been replaced with an active firing squad designed to train military personnel. Good luck.")
     time.sleep(1)
@@ -307,7 +358,7 @@ def question2(treasure, health, ada):
         print("Very good. Please note that any presence of danger is merely a tool of psychological manipulation meant to enhance the testing experience.")
         health += 0
         ada -= 1
-        question3(treasure, health, ada)
+        question3(treasure, health, ada, jackpot)
     else:
         time.sleep(1)
         print("Have you heard of turrets? They're about six feet tall, unstable on their feet, and full of bullets. Oh wait, that's you in 5 seconds.")
@@ -315,13 +366,13 @@ def question2(treasure, health, ada):
         health -= 1
         time.sleep(1)
         print(f"| Current Health: {health} |") 
-        question2(treasure, health, ada)
+        question2(treasure, health, ada, jackpot)
 
 
 
 
-def question1(treasure, health, ada):
-    health_check(treasure, health, ada)
+def question1(treasure, health, ada, jackpot):
+    health_check(treasure, health, ada, jackpot)
     answer = input("Before you are three doors. One yellow, one blue, and one red. Through which door would you like to move in order to reach the second test question?\n")  
     if answer.lower() == "blue":
         time.sleep(1)
@@ -329,7 +380,7 @@ def question1(treasure, health, ada):
         time.sleep(1)
         health += 0
         ada -= 1
-        question2(treasure, health, ada)
+        question2(treasure, health, ada, jackpot)
     elif answer.lower() == "red":
         time.sleep(1)
         print("Behind the red door is a sea of flames heated to a temperature five times beyond what the human skeleton can handle.")
@@ -337,7 +388,7 @@ def question1(treasure, health, ada):
         ada += 0
         time.sleep(1)
         print(f"| Current Health: {health} |") 
-        question1(treasure, health, ada)
+        question1(treasure, health, ada, jackpot)
     elif answer.lower() == "yellow":
         time.sleep(1)
         print("Oops, all huntsman spiders behind the yellow door!")
@@ -345,7 +396,7 @@ def question1(treasure, health, ada):
         ada += 0
         time.sleep(1)
         print(f"| Current Health: {health} |")
-        question1(treasure, health, ada) 
+        question1(treasure, health, ada, jackpot) 
     else:
         time.sleep(1)
         print("Type something valid!")
@@ -353,9 +404,9 @@ def question1(treasure, health, ada):
         ada += 0
         time.sleep(1)
         print(f"| Current Health: {health} |")
-        question1(treasure, health, ada)
+        question1(treasure, health, ada, jackpot)
 
-def practice2(treasure, health, ada):
+def practice2(treasure, health, ada, jackpot):
     computer_brands = [
     "Apple",
     "Dell",
@@ -424,30 +475,29 @@ def practice2(treasure, health, ada):
         time.sleep(1)
         print("The testing sequence will start now. Flatiron is required to warn you that the most common side effects of testing are pervasive superstition, powerful hallucinations, and death. Incorrect answers will deplete your health. Let's begin")
         time.sleep(1)
-        question1(treasure, health, ada)
+        question1(treasure, health, ada, jackpot)
     else:
         print("Print something valid!!!\n")
         time.sleep(1)
-        practice2(treasure, health, ada) 
+        practice2(treasure, health, ada, jackpot) 
         
 
-def practice(treasure, health, ada):
+def practice(treasure, health, ada, jackpot):
     answer = int(input("Please pick a number between 1 and 5\n"))
     if answer in range(1, 6):
         print("Good work.")
         time.sleep(1)
-        practice2(treasure, health, ada)
+        practice2(treasure, health, ada, jackpot)
     else:
         print("Type in between 1-5\n")
-        practice(treasure, health, ada)
+        practice(treasure, health, ada,jackpot)
 
 
 def main():
     start()
-    treasure, health, ada = 0, 5, 9
-    practice(treasure, health, ada)
-    health_check(treasure, health, ada)
-    print(f"Final status: Treasure: {treasure}, Health: {health}, Ada: {ada}")
+    treasure, health, ada, jackpot = 0, 5, 9, 0
+    practice(treasure, health, ada, jackpot)
+    health_check(treasure, health, ada, jackpot)
 
 if __name__ == "__main__":
     main()
